@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Atlas - World of Senethis</title>
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/maps.css">
+        <script src="../entries/mapEntries.js" defer></script>
+        <script src="../page scripts/mapsScript.js" defer></script>
+    </head>
+    <body>
+        <div id="parchmentimage"></div>
+        <section id="allpagecontent">
+            <section id="topbar"> <!-- Handles the topbar that is used on all of the pages -->
+                <h1 class="topbarbanner" id="topbarheader">World of Senethis</h1>
+                <h2 id="topbarhistory" class="topbarbanner"><a href="history.html"> <img src="../images/historyIcon.png" alt="History"></a></h2>
+                <h2 id="topbarmaps" class="topbarbanner"><a href="maps.html"> <img src="../images/Atlas.png" alt="Maps"></a></h2>
+                <h2 id="topbarhome" class="topbarbanner"><a href="../index.html">Home</a></h2>
+                <h2 id="topbarcharacters" class="topbarbanner"><a href="characters.html"> <img src="../images/PeopleIcon.png" alt="Characters"></a></h2>
+                <h2 id="topbarplaces" class="topbarbanner"><a href="place.html"> <img src="../images/Places.png" alt="Places"> </a></h2>
+            </section>
+            <section id="atlasPage">
+
+                <h2 id="atlasBanner">
+                World Atlas
+                </h2>
+
+                <p id="atlasInstructions">
+                Select a map type to display. Click a category to retract or expand buttons. Click on the map to expand, zoom, and pan.
+                </p>
+
+                <section id="atlasLayout">
+
+                    <!-- Button Panel - buttons are added with javascript -->
+
+                    <div id="atlasSidebar">            
+                        <div class="buttonGroup">
+                            <h3 class="buttonGroupHeader"
+                                data-title="General Maps">
+                                ▼ General Maps
+                            </h3>
+                            <div id="generalButtons"
+                                class="buttonGroupContent show">
+                            </div>
+                        </div>
+
+                        <div class="buttonGroup">
+                            <h3 class="buttonGroupHeader"
+                                data-title="Demographics">
+                                ► Demographics
+                            </h3>
+                            <div id="demographicButtons"
+                                class="buttonGroupContent">
+                            </div>
+                        </div>
+
+                        <div class="buttonGroup">
+                            <h3 class="buttonGroupHeader"
+                                data-title="Historical">
+                                ► Historical
+                            </h3>
+                            <div id="historicalButtons"
+                                class="buttonGroupContent">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Dispay - description is added with javascript -->
+
+                    <div id="atlasMapContainer">
+                        <img id="atlasMap" src="../images/Maps/PoliticalMap.png" alt="Political Map" draggable="false">
+                        <h3 id="mapTitle">Political Map</h3>
+                        <p id="mapDescription">
+                            
+                        </p>
+                    </div>
+                </section>
+            </section>
+
+    </section>
+
+    <!-- Big Map - handlded by javascript -->
+    <div id="mapOverlay">
+
+        <img id="overlayMap" draggable="false">
+
+    </div>
+</body>
+</html>

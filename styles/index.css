@@ -1,0 +1,82 @@
+/* Homepage */
+.homepagebanner {
+    background: url("../images/PageHeaderScroll.png") center/110% 110% no-repeat;
+    width:fit-content;
+    margin:1rem auto;
+    padding:2rem 3rem;
+
+    text-align: center;
+    font-size:2rem;
+}
+
+#homepageinfogrid {
+    width: min(95%, 1100px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.homepageBox {
+    position: relative;
+
+    background: url("../images/HomePageTome.png") center/100% 100% no-repeat;
+    aspect-ratio: 2 / 3;
+}
+
+.homepagelink {
+    position: absolute;    
+    left: 50%;
+    top: 30%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+
+    color: gold;
+    text-shadow: 2px 2px 1px rgb(128, 95, 11);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.homepageinfo {
+    position: absolute;
+    left: 50%;
+    top: 38%;   /* positions the text underneath the header */
+    width: 45%; /* sized to not outsize UI element */
+    font-size: 1.3rem;
+    transform: translateX(-50%);
+
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.homepagelink a {
+    color: inherit;
+    display: block;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    #homepageinfogrid {
+        grid-template-columns: 1fr;
+    }
+
+    .homepageinfo {
+        font-size: 1rem;
+    }
+
+    .homepagelink {
+        font-size: 1.5rem;
+    }
+    
+    .homepagebanner {
+        font-size: 1.75rem;
+        background-size: 95% 110%;
+        padding: 4rem 3rem;
+    }
+
+}

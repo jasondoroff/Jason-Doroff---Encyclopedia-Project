@@ -1,0 +1,164 @@
+:root {
+    --paper: #d8c29d;
+    --navy: #101744;
+    --gold: #f3d36b;
+    --green: #5c7a3d;
+    --brown: #4a3421;
+
+    --content-width: 1100px;
+    --radius: 10px;
+}
+
+/* Global Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: black;
+    font-family: Georgia, serif;
+    line-height: 1.6;
+
+    background: url("../images/marginImage.jpg") center/cover fixed;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: Georgia, serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Page Layout */
+#allpagecontent {
+    position: relative;
+    z-index: 2;
+}
+
+#parchmentimage {
+    position: fixed;
+    inset: 0;
+
+    width: min(95%, var(--content-width));
+    margin: auto;
+
+    background: url("../images/parchmentbackground.jpg") center/cover fixed;
+
+    border-left: 2px solid var(--brown);
+    border-right: 2px solid var(--brown);
+
+    z-index: 1;
+}
+
+/* Topbar Navigation */
+
+#topbar {
+    width: min(95%, var(--content-width));
+    margin: 1rem auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 110px 70px;
+
+    grid-template-areas:
+        "history maps header char places"
+        "history maps home char places";
+}
+
+#topbar h1, #topbar h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#topbarheader {
+    grid-area: header;
+    background: url(../images/TopbarHeaderFrame.png) center/100% 100% no-repeat;
+    font-size: 1.7rem;
+}
+
+#topbarhistory {
+    grid-area: history;
+}
+
+#topbarmaps {
+    grid-area: maps;
+}
+
+#topbarhome {
+    grid-area: home;
+    background: url(../images/TopbarHomeFrame.png) center/100% 100% no-repeat;
+}
+
+#topbarhome:hover {
+    background: url("../images/TopbarHomeFrameHover.png") center/100% 100% no-repeat;
+}
+
+#topbarcharacters {
+    grid-area: char;
+}
+
+#topbarplaces {
+    grid-area: places;
+}
+
+.topbarbanner {
+    background: url(../images/TopbarButtonFrame.png) center/100% 100% no-repeat;
+}
+
+.topbarbanner:hover {
+    background: url("../images/TopbarButtonFrameHover.png") center/100% 100% no-repeat;
+}
+
+.topbarbanner a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.topbarbanner img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 900px) {
+
+    #topbar {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "header header"
+            "history char"
+            "maps places"
+            "home home";
+
+        grid-template-rows: auto;
+    }
+
+    #topbarhome {
+        background: url(../images/TopbarHomeMobile.png) center/100% 100% no-repeat;
+    }
+
+    #topbarhome:hover {
+        background: url(../images/TopbarHomeMobile.png) center/100% 100% no-repeat;
+        color: var(--gold)
+    }
+}

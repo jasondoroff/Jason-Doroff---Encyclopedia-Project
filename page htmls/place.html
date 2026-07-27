@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Places - World of Senethis</title>
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/place.css">
+        <script src="../entries/placeEntries.js" defer></script>
+        <script src="../page scripts/placeScript.js" defer></script>
+    </head>
+    <body>
+        <div id="parchmentimage"></div>
+
+        <section id="allpagecontent">
+
+            <section id="topbar"> <!-- Handles the topbar that is used on all of the pages -->
+                <h1 class="topbarbanner" id="topbarheader">World of Senethis</h1>
+                <h2 id="topbarhistory" class="topbarbanner"><a href="history.html"> <img src="../images/historyIcon.png" alt="History"></a></h2>
+                <h2 id="topbarmaps" class="topbarbanner"><a href="maps.html"> <img src="../images/Atlas.png" alt="Maps"></a></h2>
+                <h2 id="topbarhome" class="topbarbanner"><a href="../index.html">Home</a></h2>
+                <h2 id="topbarcharacters" class="topbarbanner"><a href="characters.html"> <img src="../images/PeopleIcon.png" alt="Characters"></a></h2>
+                <h2 id="topbarplaces" class="topbarbanner"><a href="place.html"> <img src="../images/Places.png" alt="Places"> </a></h2>
+            </section>
+
+            <section id="placepageContent">
+
+                <h2 id="placepagebanner">
+                    Place Encyclopedia
+                </h2>
+
+                <!-- sets up the sorting controls -->
+                <section id="entryControls">
+                    <label>Sort</label>
+                    <select id="sortSelect">
+                        <option value="alpha">Alphabetical</option>
+                        <option value="population">Population</option>
+                    </select>
+
+                    <label>Filter</label>
+                    <select id="filterSelect">
+                        <option value="all">All</option>
+                        <option value="juagast">Juagast</option>
+                        <option value="tara">Tara</option>
+                        <option value="pembastia">Pembastia</option>
+                    </select>
+                </section>
+
+                <section id="entryContent"> /* filled out by javascript */
+
+                </section>
+            </section>
+
+        </section>
+    </body>
+</html>

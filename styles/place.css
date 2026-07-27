@@ -1,0 +1,89 @@
+#placepagebanner {
+    background: url("../images/PageHeaderScroll.png");
+    background-size: cover;
+    width:fit-content;
+
+    margin:1rem auto;
+    padding:2.5rem 3rem;
+
+    font-size:2rem;
+}
+
+#entryControls {
+    width: min(95%, 1100px);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+
+    padding: 0 1rem;
+}
+
+#entryContent {
+    width: min(95%, 1050px);
+    margin: auto;
+
+    display: grid;
+    gap: 1.5rem;
+
+    padding-bottom: 2rem;
+}
+
+.entryCard {
+    background: var(--paper);
+
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+.entryHeader {
+    background: var(--navy);
+    color: #fff4b0;
+
+    padding: 1rem;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: background .2s;
+}
+
+.entryHeader:hover {
+    background: #1d2b74;
+}
+
+.entryMeta {
+    margin: .75rem 0;
+    padding-inline: 1.2rem;
+
+    font-weight: bold;
+}
+
+.entryText {
+    display: none;
+
+    padding: 0 1.2rem 1.25rem;
+}
+
+.entryText.show {
+    display: block;
+}
+
+.entryText p {
+    text-indent: 2em;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    #placepagebanner {
+        background: url("../images/PageHeaderScroll.png") center/100% 100% no-repeat;
+        padding: 1.5rem 2.2rem;
+        font-size: 1.75rem;
+    }
+}  
